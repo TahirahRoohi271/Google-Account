@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assests/css/account.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&family=Lora:ital@1&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Gmail Account</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="left">
+                <div class="g-form">
+                    <img src="./assests/images/logoo.png" width="70">
+                    <h3>Create your Google Account</h3>
+                    <form>
+                        <input type="text" name="" placeholder="First Name" required>
+                        <input type="text" name="" placeholder="Last Name" required>
+                        <div id="uname">
+                        <input type="email" name="" placeholder="Username" required>
+                        <label>
+                            @gmail.com
+                        </label>
+                        </div>
+                        <span>
+                            You can use letters, numbers & periods
+                        </span>
+                        <br>
+                        <a href="#">Use my current email address instead</a>
+                        <input type="password" placeholder="Password" id="pwrd" required>
+                        <input type="password" placeholder="Confirm" id="cpwrd" required>
+                        <span>
+                            Use 8 more characters with a mix of letters, numbers & symbols
+                        </span>
+                        <br>
+                        <input type="checkbox" class="checkbox" onclick="show()">
+                        &nbsp;Show Password
+                        <div class="b-links">
+                            <a href="#">Sign in instead</a>
+                            <input type="submit" id="next" value="Next">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./assests/images/lock.png">
+                <p>One account. All of Google working for you</p>
+            </div>
+        </div>
+    </header>
+    <script type="text/javascript">
+        function show(){
+            var pwrd = document.getElementById("pwrd");
+            var cpwrd = document.getElementById("cpwrd");
+            if (pwrd.type==="password" && cpwrd.type==="password") {
+                pwrd.type="text";
+                cpwrd.type="text";
+            }
+            else{
+                pwrd.type="password";
+                cpwrd.type="password";
+            }
+        }
+    </script>
+</body>
+</html>
